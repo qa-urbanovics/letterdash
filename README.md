@@ -9,3 +9,4 @@ Tiny one-page reaction game. Hit the shown letter fast.
 
 ## Deploy
 Push to `main` (or `master`) — GitHub Actions deploys to GitHub Pages.
+TEST
