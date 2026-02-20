@@ -75,6 +75,8 @@ class Game {
     this.modalLevel = document.getElementById("modalLevel");
     this.modalBest = document.getElementById("modalBest");
     this.modalText = document.getElementById("modalText");
+    this.modalAvgRt = document.getElementById("modalAvgRt");
+    this.modalBestRt = document.getElementById("modalBestRt");
 
     this.modalPlayBtn = document.getElementById("modalPlayBtn");
     this.modalCopyBtn = document.getElementById("modalCopyBtn");
@@ -477,8 +479,8 @@ class Game {
 
     const avg = this.rtCount ? Math.round(this.rtSum / this.rtCount) : null;
 
-    this.modalAvgRt.textContent = avg === null ? "—" : `${avg} ms`;
-    this.modalBestRt.textContent = this.rtBest === null ? "—" : `${this.rtBest} ms`;
+    if (this.modalAvgRt) this.modalAvgRt.textContent = avg === null ? "—" : `${avg} ms`;
+    if (this.modalBestRt) this.modalBestRt.textContent = this.rtBest === null ? "—" : `${this.rtBest} ms`;
 
     // Fill modal
     this.modalBadge.textContent = finished ? "🎉" : "🌟";
