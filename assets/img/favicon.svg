@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="LetterDash favicon mascot">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5b7cfa"/>
+      <stop offset="1" stop-color="#ff7ab6"/>
+    </linearGradient>
+    <radialGradient id="shine" cx="32%" cy="22%" r="70%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#0b1224" flood-opacity="0.25"/>
+    </filter>
+    <clipPath id="clip">
+      <circle cx="256" cy="256" r="236"/>
+    </clipPath>
+  </defs>
+
+  <!-- Circle background -->
+  <circle cx="256" cy="256" r="236" fill="url(#bg)"/>
+  <g clip-path="url(#clip)">
+    <circle cx="205" cy="145" r="260" fill="url(#shine)"/>
+  </g>
+
+  <!-- Motion lines (kept bold so it survives at 16px) -->
+  <g opacity="0.9" fill="#ffffff">
+    <rect x="86" y="310" width="120" height="20" rx="10"/>
+    <rect x="72" y="350" width="92" height="18" rx="9" opacity="0.85"/>
+    <rect x="92" y="388" width="70" height="16" rx="8" opacity="0.75"/>
+  </g>
+
+  <!-- Mascot runner -->
+  <g filter="url(#shadow)" transform="translate(0,0)">
+    <!-- Back leg -->
+    <path d="M205 335
+             C170 355 155 382 158 408
+             C161 435 186 450 212 446
+             C238 443 252 420 246 395
+             C240 371 227 349 205 335 Z"
+          fill="#ffffff" opacity="0.85"/>
+    <!-- Back foot -->
+    <path d="M185 440
+             C160 452 146 471 152 488
+             C159 507 186 512 211 504
+             C236 496 251 477 244 460
+             C236 442 208 430 185 440 Z"
+          fill="#ffffff" opacity="0.85"/>
+
+    <!-- Body -->
+    <rect x="220" y="210" width="160" height="150" rx="58" fill="#ffffff"/>
+
+    <!-- Head -->
+    <circle cx="360" cy="182" r="58" fill="#ffffff"/>
+
+    <!-- Face (dark ink so it reads small) -->
+    <g fill="#1c2440">
+      <circle cx="344" cy="176" r="9"/>
+      <circle cx="378" cy="176" r="9"/>
+      <path d="M346 200 Q361 214 376 200" fill="none" stroke="#1c2440" stroke-width="7" stroke-linecap="round"/>
+    </g>
+
+    <!-- Front arm (reaching) -->
+    <path d="M360 248
+             C392 234 418 242 432 262
+             C445 281 439 305 417 319
+             C395 333 370 323 358 301
+             C346 279 343 260 360 248 Z"
+          fill="#ffffff"/>
+
+    <!-- Hand spark -->
+    <g transform="translate(424 250)">
+      <circle cx="0" cy="0" r="6" fill="#ffffff"/>
+      <path d="M0 -18 L0 -8 M0 8 L0 18 M-18 0 L-8 0 M8 0 L18 0"
+            stroke="#ffffff" stroke-width="6" stroke-linecap="round"/>
+    </g>
+
+    <!-- Front leg -->
+    <path d="M350 345
+             C385 348 410 370 413 398
+             C416 427 396 450 367 452
+             C338 455 315 433 314 404
+             C313 376 328 357 350 345 Z"
+          fill="#ffffff"/>
+
+    <!-- Front foot -->
+    <path d="M370 446
+             C401 444 427 458 433 478
+             C439 500 422 514 395 514
+             C366 514 337 501 332 481
+             C327 461 343 448 370 446 Z"
+          fill="#ffffff"/>
+  </g>
+</svg>
