@@ -65,7 +65,6 @@ class Game {
     this.linkBtn = $("linkBtn");
     this.bestEl = $("best");
     this.noteLine = $("noteLine");
-    this.stageMsg = document.getElementById("stageMsg");
 
     // Modal
     this.resultModal = document.getElementById("resultModal");
@@ -366,8 +365,6 @@ class Game {
   nextRound() {
     if (!this.running) return;
 
-    this.setStageMsg("");
-
     this.inputLocked = false;
     this.runnerState("run");
     this.need = this.randLetter(this.need);
@@ -452,12 +449,6 @@ class Game {
     }
   }
 
-  setStageMsg(text) {
-    if (!this.stageMsg) return;
-    this.stageMsg.textContent = text;
-    this.stageMsg.style.display = text ? "block" : "none";
-  }
-
   miss(message) {
     if (!this.running) return;
 
@@ -488,8 +479,8 @@ class Game {
 
     const avg = this.rtCount ? Math.round(this.rtSum / this.rtCount) : null;
 
-    if (this.modalAvgRt) this.modalAvgRt.textContent = avg === null ? "—" : `${avg} ms`;
-    if (this.modalBestRt) this.modalBestRt.textContent = this.rtBest === null ? "—" : `${this.rtBest} ms`;
+  if (this.modalAvgRt) this.modalAvgRt.textContent = avg === null ? "—" : `${avg} ms`;
+  if (this.modalBestRt) this.modalBestRt.textContent = this.rtBest === null ? "—" : `${this.rtBest} ms`;
 
     // Fill modal
     this.modalBadge.textContent = finished ? "🎉" : "🌟";
@@ -525,7 +516,6 @@ class Game {
 
     this.setShare(true);
     this.saveBest();
-    this.setStageMsg("You made it! 🎉");
     this.showResultModal({ finished: true });
     this.noteLine.textContent = "Finished! Try again to beat your score 🙂";
   }
@@ -544,7 +534,6 @@ class Game {
 
     this.setShare(false);
     this.saveBest();
-    this.setStageMsg("No worries — try again! 👟");
     this.showResultModal({ finished: false });
     this.noteLine.textContent = "Game over. Try again 🙂";
   }

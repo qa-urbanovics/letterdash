@@ -579,6 +579,22 @@ html[data-theme="dark"] .stageMsg{
 
 /* make mood always visible too */
 .mood{
-  z-index: 9;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.18);
+  position:absolute;
+  left:0;
+  bottom: 92px; /* ✅ выше дорожки, всегда внутри stage */
+  transform: translateX(calc(var(--x,0px) + 6px));
+  font-size: 13px;
+  font-weight: 900;
+  color: var(--text);
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.86);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: transform 220ms ease;
+  white-space: nowrap;
+  z-index: 10;
+}
+html[data-theme="dark"] .mood{
+  background: rgba(15,25,51,0.92);
 }
